@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ウォーキングアプリ</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f9fafb;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* セクション共通 */
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* カード */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+/* 特徴グリッド */
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>歩くを、もっと楽しく。</h1>
+  <p>モバイルウォーキングアプリ開発中</p>
+</header>
+
+<section>
+  <h2>アプリについて</h2>
+  <div class="card">
+    日々の歩行を記録し、健康習慣の継続をサポートする
+    シンプルなモバイルウォーキングアプリです。
+  </div>
+</section>
+
+<section>
+  <h2>特徴</h2>
+  <div class="features">
+    <div class="card">歩数・距離の自動記録</div>
+    <div class="card">直感的でシンプルなUI</div>
+    <div class="card">継続しやすい設計</div>
+    <div class="card">今後の機能拡張予定</div>
+  </div>
+</section>
+
+<section>
+  <h2>今後について</h2>
+  <div class="card">
+    現在、本アプリは開発中です。<br><br>
+    より良い体験を提供するため、機能改善を進めております。<br>
+    リリース情報は本サイトにてお知らせいたします。
+  </div>
+</section>
+
+<section>
+  <h2>アンゴラシステム合同会社</h2>
+  <div class="card">
+    当社は、自社モバイルアプリの企画・開発・運営を行います。
+  </div>
+</section>
+
+<section>
+  <h2>お問い合わせ</h2>
+  <div class="card">
+    お問い合わせは以下よりご連絡ください。<br><br>
+    info@angolasystem.com
+  </div>
+</section>
+
+<footer>
+  © 2026 Angola System,LLC
+</footer>
+
+</body>
+</html>
