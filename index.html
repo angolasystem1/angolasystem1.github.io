@@ -3,67 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ウォーキングアプリ</title>
+<title>WalkRoid</title>
 
 <style>
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #f9fafb;
-  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: #ffffff;
+  color: #222;
+}
+
+/* ナビゲーション */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 10px;
 }
 
 /* ヘッダー */
-header {
-  background: linear-gradient(135deg, #4CAF50, #2E7D32);
-  color: white;
+.hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 140px 20px 120px;
+  background: linear-gradient(135deg, #00C853, #0091EA);
+  color: white;
 }
 
-header h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.hero h1 {
+  font-size: 40px;
 }
 
-header p {
+.hero p {
   font-size: 18px;
   opacity: 0.9;
 }
 
-/* セクション共通 */
+/* CTA */
+.cta {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #00C853, #0091EA);
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 145, 234, 0.3);
+}
+
+/* セクション */
 section {
   padding: 80px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 28px;
-}
-
-/* カード */
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   margin-bottom: 20px;
 }
 
-/* 特徴グリッド */
+/* スクショ */
+.screens {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.screens img {
+  width: 200px;
+  border-radius: 20px;
+}
+
+/* 特徴 */
 .features {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 20px;
 }
 
-@media (min-width: 600px) {
+.feature {
+  padding: 25px;
+  border-radius: 16px;
+  background: #f4f9fb;
+}
+
+@media (min-width: 700px) {
   .features {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* CTA下部 */
+.cta-section {
+  text-align: center;
+  background: linear-gradient(135deg, #E0F7FA, #E8F5E9);
+  padding: 100px 20px;
 }
 
 /* フッター */
@@ -71,62 +121,68 @@ footer {
   text-align: center;
   padding: 40px 20px;
   font-size: 14px;
-  color: #777;
+  color: #666;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>歩くを、もっと楽しく。</h1>
-  <p>モバイルウォーキングアプリ開発中</p>
-</header>
+<!-- ナビゲーション -->
+<div class="navbar">
+  <a href="http://www.angolasystem.com" class="logo">
+    <img src="logo.png" alt="logo">
+    Angola System,LLC
+  </a>
+</div>
 
+<!-- ヘッダー -->
+<section class="hero">
+  <h1>WalkRoid</h1>
+  <p>現在開発中のウォーキング支援モバイルアプリ</p>
+
+  <a href="#" class="cta">App Store公開予定</a>
+</section>
+
+<!-- スクショ -->
 <section>
-  <h2>アプリについて</h2>
-  <div class="card">
-    日々の歩行を記録し、健康習慣の継続をサポートする
-    シンプルなモバイルウォーキングアプリです。
+  <h2>アプリ画面（開発中）</h2>
+  <div class="screens">
+    <img src="screen1.png">
+    <img src="screen2.png">
+    <img src="screen3.png">
   </div>
 </section>
 
+<!-- 説明 -->
 <section>
-  <h2>特徴</h2>
+  <h2>WalkRoidについて</h2>
+  <p>
+    WalkRoidは、日々のウォーキングを可視化し、習慣化をサポートするモバイルアプリです。現在開発中です。
+  </p>
+</section>
+
+<!-- 機能 -->
+<section>
+  <h2>主な機能（予定）</h2>
   <div class="features">
-    <div class="card">歩数・距離の自動記録</div>
-    <div class="card">直感的でシンプルなUI</div>
-    <div class="card">継続しやすい設計</div>
-    <div class="card">今後の機能拡張予定</div>
+    <div class="feature">歩数・距離の自動記録</div>
+    <div class="feature">シンプルで使いやすいUI</div>
+    <div class="feature">履歴の可視化</div>
+    <div class="feature">継続しやすい設計</div>
   </div>
 </section>
 
-<section>
-  <h2>今後について</h2>
-  <div class="card">
-    現在、本アプリは開発中です。<br><br>
-    より良い体験を提供するため、機能改善を進めております。<br>
-    リリース情報は本サイトにてお知らせいたします。
-  </div>
+<!-- CTA -->
+<section class="cta-section">
+  <h2>公開をお待ちください</h2>
+  <a href="#" class="cta">近日公開予定</a>
 </section>
 
-<section>
-  <h2>アンゴラシステム合同会社</h2>
-  <div class="card">
-    当社は、自社モバイルアプリの企画・開発・運営を行います。
-  </div>
-</section>
-
-<section>
-  <h2>お問い合わせ</h2>
-  <div class="card">
-    お問い合わせは以下よりご連絡ください。<br><br>
-    info@angolasystem.com
-  </div>
-</section>
-
+<!-- フッター -->
 <footer>
-  © 2026 Angola System,LLC
+  © 2026 Angola System,LLC<br>
+  自社モバイルアプリの企画・開発・運営
 </footer>
 
 </body>
